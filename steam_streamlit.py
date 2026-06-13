@@ -54,7 +54,7 @@ def carregar_dados() -> dict[str, pd.DataFrame]:
     ausentes = [nome for nome in arquivos.values() if not (DIRETORIO_DADOS / nome).exists()]
     if ausentes:
         raise FileNotFoundError(
-            f"Arquivos de análise ausentes: {', '.join(ausentes)}. Execute `python teste_steam.py`."
+            f"Arquivos de análise ausentes: {', '.join(ausentes)}. Execute `python steam_calculo.py`."
         )
     return {chave: pd.read_csv(DIRETORIO_DADOS / nome_arquivo) for chave, nome_arquivo in arquivos.items()}
 
