@@ -9,9 +9,10 @@ Este projeto adapta o trabalho original de analise de oportunidades para jogos n
 
 ## Arquivos nesta entrega
 
-Esta pasta contem apenas os arquivos essenciais de codigo, modelagem e documentacao do trabalho. Os artefatos grandes ou gerados ficaram fora do Git:
+Esta pasta contem os arquivos essenciais de codigo, modelagem, documentacao e o dataset CSV usado no trabalho.
 
-- `steam_dataset.csv`: dataset bruto baixado do Kaggle.
+Artefatos gerados continuam fora do Git:
+
 - `steam_analysis/`: saida gerada por `steam_calculo.py`.
 - `steam_database.sqlite`: banco gerado por `criar_banco_steam.py`.
 
@@ -21,7 +22,6 @@ Esses arquivos podem ser recriados localmente pelos comandos abaixo.
 
 ```powershell
 python -m pip install -r requirements.txt
-python kaggle_collect
 python steam_calculo.py
 python criar_banco_steam.py
 ```
