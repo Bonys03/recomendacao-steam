@@ -1,0 +1,44 @@
+{
+  "index_patterns": ["steam_games*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0
+    },
+    "mappings": {
+      "properties": {
+        "game_id": { "type": "integer" },
+        "name": {
+          "type": "text",
+          "fields": {
+            "keyword": { "type": "keyword" }
+          }
+        },
+        "release_date": {
+          "type": "date",
+          "ignore_malformed": true
+        },
+        "release_year": { "type": "integer" },
+        "price_usd": { "type": "float" },
+        "price_band": { "type": "keyword" },
+        "owners_lower": { "type": "long" },
+        "owners_upper": { "type": "long" },
+        "owners_midpoint": { "type": "float" },
+        "peak_ccu": { "type": "integer" },
+        "positive_reviews": { "type": "integer" },
+        "negative_reviews": { "type": "integer" },
+        "review_count": { "type": "integer" },
+        "positive_ratio": { "type": "float" },
+        "recommendations": { "type": "integer" },
+        "avg_playtime_minutes": { "type": "integer" },
+        "metacritic_score": { "type": "integer" },
+        "developers": { "type": "keyword" },
+        "publishers": { "type": "keyword" },
+        "genres": { "type": "keyword" },
+        "categories": { "type": "keyword" },
+        "tags": { "type": "keyword" },
+        "platforms": { "type": "keyword" }
+      }
+    }
+  }
+}

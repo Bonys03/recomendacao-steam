@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.streamlit/
+steam_dataset.csv
+steam_database.sqlite
+steam_analysis/
+.env
